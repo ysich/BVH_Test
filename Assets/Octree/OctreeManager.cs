@@ -16,10 +16,10 @@ namespace Octree
         [Tooltip("八叉树深度")] public int treeDepth;
 
 
-        private OctreeNode rootNode;
+        public OctreeNode rootNode;
         private List<GameObject> sceneGameObjects;
 
-        public void Start()
+        public void Awake()
         {
             GenerateSceneGameObjects();
             OctreePartion();
@@ -50,7 +50,7 @@ namespace Octree
             GenerateOctree(rootNode, range, treeDepth);
         }
 
-        private void GenerateOctree(OctreeNode rootNode, float range, float depth)
+        public void GenerateOctree(OctreeNode rootNode, float range, float depth)
         {
             if (depth <= 0)
                 return;
@@ -127,13 +127,6 @@ namespace Octree
                 if(octreeNode.bottom4.Contains(pos))
                     octreeNode.bottom4.AddAreaGameObject(go);
             }
-        }
-
-        private void OnDrawGizmos()
-        {
-            if(rootNode == null)
-                return;
-            rootNode.DrawGizmos();
         }
     }
 }

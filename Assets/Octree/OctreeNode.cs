@@ -45,17 +45,6 @@ namespace Octree
             areaObjects.Add(gameObject);
         }
 
-        public void DrawGizmos()
-        {
-            Gizmos.DrawCube(center,Vector3.one * size);
-
-            foreach (var node in childNodes)
-            {
-                if(node != null)
-                    node.DrawGizmos();
-            }
-        }
-
         #region 节点扩展
 
         public OctreeNode top1

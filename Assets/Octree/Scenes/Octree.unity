@@ -225,6 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1314897651}
   - component: {fileID: 1314897650}
+  - component: {fileID: 1314897652}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -244,10 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a1595a231840cdbeec738eea232440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  genCount: 100
+  genCount: 25
   genSize: 0
   range: 100
-  treeDepth: 3
+  treeDepth: 5
 --- !u!4 &1314897651
 Transform:
   m_ObjectHideFlags: 0
@@ -263,6 +264,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1314897652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314897649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6baf21cb4dc4c93a49cc331cb9006e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  octreeManager: {fileID: 0}
+  gizmosColors:
+  - {r: 0, g: 0.5999999, b: 1, a: 1}
+  - {r: 1, g: 0.5176471, b: 0.09019608, a: 1}
+  - {r: 1, g: 0.99345577, b: 0.2971698, a: 1}
+  - {r: 0.09019607, g: 1, b: 0.35195854, a: 1}
+  - {r: 0.6981132, g: 0, b: 0.018095035, a: 1}
+  - {r: 0, g: 0.97866297, b: 1, a: 1}
+  sphere: {fileID: 0}
+  lastSpherePos: {x: 0, y: 0, z: 0}
 --- !u!1 &2111375575
 GameObject:
   m_ObjectHideFlags: 0
