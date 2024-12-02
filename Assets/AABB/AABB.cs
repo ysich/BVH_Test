@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace TAABB
 {
-    public class AABB
+    public struct AABB
     {
         /// <summary>
         /// 左上角
@@ -25,8 +25,8 @@ namespace TAABB
 
         public void Reset()
         {
-            this.minCorner = Vector3.one * float.MinValue;
-            this.maxCorner = Vector3.one * float.MaxValue;
+            this.minCorner = Vector3.one * float.MaxValue;
+            this.maxCorner = Vector3.one * float.MinValue;
         }
         public void Reset(Vector3 minCorner,Vector3 maxCorner)
         {

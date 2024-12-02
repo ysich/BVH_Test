@@ -5,7 +5,7 @@ namespace TAABB
 {
     public class AABBNodeBehaviour:MonoBehaviour
     {
-        public AABB aabb;
+        public AABB aabb = new AABB(Vector3.zero,Vector3.zero);
 
         public Vector3 minCorner;
         public Vector3 maxCorner;
@@ -25,7 +25,7 @@ namespace TAABB
             if (m_LastPos != pos)
             {
                 m_LastPos = pos;
-                aabb.Reset(m_LastPos + minCorner,m_LastPos + maxCorner);
+                aabb.Reset(m_LastPos + minCorner, m_LastPos + maxCorner);
             }
         }
         
@@ -36,11 +36,8 @@ namespace TAABB
 
         private void OnDrawGizmos()
         {
-            if (aabb!=null)
-            {
-                Gizmos.color = m_GizmosColor;
-                Gizmos.DrawWireCube(aabb.center,aabb.size);
-            }
+            Gizmos.color = m_GizmosColor;
+            Gizmos.DrawWireCube(aabb.center,aabb.size);
         }
     }
 }
