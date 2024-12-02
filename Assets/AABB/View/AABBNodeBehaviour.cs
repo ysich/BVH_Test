@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AABB
+namespace TAABB
 {
-    public class AABBNode:MonoBehaviour
+    public class AABBNodeBehaviour:MonoBehaviour
     {
         public AABB aabb;
 

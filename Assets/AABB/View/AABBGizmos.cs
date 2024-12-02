@@ -2,12 +2,12 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace AABB
+namespace TAABB
 {
     public class AABBGizmos:MonoBehaviour
     {
-        public AABBNode aabbNode1;
-        public AABBNode aabbNode2;
+        public AABBNodeBehaviour aabbNode1;
+        public AABBNodeBehaviour aabbNode2;
 
         public GameObject point;
         
