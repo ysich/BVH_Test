@@ -26,6 +26,8 @@ namespace TBVH
 
         public GenerateType generateType;
 
+        public BVHBuildType buildType;
+
         private void Awake()
         {
             m_SeneObjects = new List<GameObject>();
@@ -55,7 +57,7 @@ namespace TBVH
                 m_SeneObjects.Add(go);
             }
 
-            m_BvhSpace.BuildBVH(m_SeneObjects, partionDepth);
+            m_BvhSpace.BuildBVH(m_SeneObjects, partionDepth,buildType);
         }
 
         private void OnDrawGizmos()

@@ -170,7 +170,8 @@ MonoBehaviour:
   generateCount: 100
   partionDepth: 10
   displayDepth: 4
-  generateType: 0
+  generateType: 1
+  buildType: 1
 --- !u!1 &781060452
 GameObject:
   m_ObjectHideFlags: 0
