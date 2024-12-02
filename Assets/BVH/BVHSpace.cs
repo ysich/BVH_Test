@@ -46,8 +46,6 @@ namespace TBVH
             var leftNode = new BVHNode(node.name + "_left_" + depth, null);
             var rightNode = new BVHNode(node.name + "_right_" + depth, null);
             node.SetLeafNode(leftNode,rightNode);
-            leftNode.parentNode = node;
-            rightNode.parentNode = node;
 
             List<GameObject> leftNodeObjects = new List<GameObject>();
             List<GameObject> rightNodeObjects = new List<GameObject>();
