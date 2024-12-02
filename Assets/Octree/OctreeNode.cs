@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Octree
+namespace TOctree
 {
     public class OctreeNode
     {

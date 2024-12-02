@@ -1,13 +1,13 @@
-/*---------------------------------------------------------------------------------------
--- 负责人: onemt
--- 创建时间: 2024-11-29 17:26:29
--- 概述:
----------------------------------------------------------------------------------------*/
+using TAABB;
 
-namespace BVH
+namespace TBVH
 {
     public class BVHNode
     {
-        
+        public BVHNode leftNode;
+        public BVHNode rightNode;
+        public BVHNode parentNode;
+
+        public AABB aabb;
     }
 }

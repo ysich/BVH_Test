@@ -7,7 +7,7 @@
 using System;
 using UnityEngine;
 
-namespace AABB
+namespace TAABB
 {
     public class AABB
     {
