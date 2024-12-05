@@ -1,9 +1,4 @@
-﻿/*---------------------------------------------------------------------------------------
--- 负责人: onemt
--- 创建时间: 2024-11-29 11:29:33
--- 概述:
----------------------------------------------------------------------------------------*/
-
+﻿
 using System;
 using UnityEngine;
 
@@ -22,6 +17,15 @@ namespace TAABB
 
         public Vector3 size => maxCorner - minCorner;
         public Vector3 center => (maxCorner + minCorner) * 0.5f;
+
+        public float surfaceArea
+        {
+            get
+            {
+                Vector3 size = this.size;
+                return (size.x * size.y + size.x + size.z + size.y * size.z);
+            }
+        }
 
         public void Reset()
         {
